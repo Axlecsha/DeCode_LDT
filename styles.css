@@ -1,0 +1,315 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --font-family-primary: 'Roboto', monospace;
+    --font-family-secondary: 'Helvetica', sans-serif;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-background: rgba(36, 36, 36, 0.5);
+    --color-red: #e62135;
+    --font-size-large: 55px;
+    --font-size-medium: 19.4px;
+    --font-size-small: 12px;
+    --font-size-extra-small: 6.8px;
+    --spacing-small: 20px;
+    --spacing-medium: 50px;
+    --spacing-large: 100px;
+    --line-height: 1.5;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-family-primary);
+}
+
+.banner {
+    background-image: url('https://i.ibb.co/cywmzqG/Screenshot-2024-06-05-at-14-13-39.png');
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: 99989;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    top: 0px
+}
+
+.video-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Чем меньше последнее число, тем меньше затемнение */
+    z-index: 0;
+}   
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0px
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    bottom: 1000px;
+    top: 96px;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    color: var(--color-white);
+    text-align: left;
+    background-color: transparent;
+    z-index: 9990;
+    cursor: pointer;
+    transition: 0.6s
+}
+.nav:hover {
+    background-color: rgb(55, 55, 55);
+    transition: 0.6s;
+}
+
+.nav_first {
+    margin-top: 15px;
+    font-size: 14px;
+    font-family: var(--font-family-secondary);
+    margin-left: 115px;
+    right: 115px;
+}
+.nav_second {
+    position: absolute;
+    top: 55px;
+    left: 300px;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.nav_animation:hover {
+    text-decoration: underline;
+    transition: 1s;
+}
+.site_name {
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 6.5px;
+    top: 30px;
+    left: -183px;
+}
+.nav_user_menu{
+    top: 55px;
+    position: absolute;
+    height: 17px;
+    width: 81px;
+    right: 115px;
+}
+.user_menu {
+    position: absolute;
+    column-gap: 15px;
+    display: flex;
+    width: 17px;
+    height: 17px;
+}
+.nav_tel {
+    /*Вставить функцию вызова набора номера*/
+}
+
+.nav_list_top {
+    column-gap: 35px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+.nav_list_low {
+    column-gap: 15px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}
+.nav_language {
+    margin-left: 10px;
+    /*Вставить функцию для смена языка*/
+}
+.mid {
+    position: absolute;
+    width: auto;
+    top: 95px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    background: var(--color-background);
+    z-index: 1;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 360px;
+    left: 115px;
+    color: var(--color-white);
+    letter-spacing: -3px;
+    font-size: var(--font-size-large);
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 9999;
+}
+
+.sub-text {
+    position: absolute;
+    color: var(--color-white);
+    font-size: var(--font-size-medium);
+    text-align: left;
+    z-index: 9999;
+}
+
+.sub-text {
+    bottom: 325px;
+    left: 115px;
+    font-family: var(--font-family-secondary);
+}
+
+
+.logo-head, .glasses_icon, .bot_icon, .lupa_icon, .lupa_1_icon, .user_icon {
+    position: absolute;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    z-index: 9999;
+}
+
+.logo-head {
+    position: absolute;
+    top: -29px;   
+    left: -185px;
+    width: 150px;
+    height: 70px;
+}
+
+.bot_icon {
+    background-image: url('https://i.ibb.co/jVzGMJw/image.png');
+    top: 506px;
+    left: 385px;
+    width: 40px;
+    height: 40px;
+}
+
+.lupa_1_icon {
+    background-image: url('https://i.ibb.co/Sw6Jtcj/lupa.png');
+    top: 507px;
+    right: 500px;
+    width: 40px;
+    height: 40px;
+}
+
+.line {
+    position: relative;
+    top: 7px;
+    width: 1303px;
+    left: -183px;
+    right: 20px;
+    border-top: 1px solid var(--color-white);
+    display: flex;
+    z-index: 9999;
+}
+
+.button_1, .button_2, .button_3 {
+    position: absolute;
+    bottom: 240px;
+    text-align: left;
+    font-family: var(--font-family-secondary);
+    border-radius: 30px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.button_1 {
+    left: 115px;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    padding: 20px 50px;
+}
+
+.button_1:hover {
+    background-color: #ba1b2b;
+    transition: 0.3s;
+}
+
+.button_2 {
+    left: 370px;
+    width: 570px;
+    background-color: rgba(255, 255, 255, 0.65);
+    color: rgb(52, 52, 52);
+    padding: 20.5px 60px;
+    z-index: 9997;
+}
+
+.button_3 {
+    left: 890px;
+    width: 165px;
+    height: 65px;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    padding: 20px;
+    z-index: 9998;
+}
+.button_3:hover {
+    background-color: #ba1b2b;
+    transition: 0.3s;
+}
+
+.description {
+    position: absolute;
+    text-align: center;
+    margin: var(--spacing-small);
+    font-size: 20px;
+    z-index: 9999;
+}
+.textarea{    
+    text-align: left;
+    color: rgba(0, 0, 0, 0.566);
+    overflow: auto;
+    width: 450px;
+    height: 23px;
+    resize: none;
+}
+.nav_lower {
+    display: flex;
+    font-size: 9px;
+    color: black !important;   
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    bottom: 50px;
+    height: 150px;
+    width: 100%;
+    text-decoration: none;
+    z-index: 99999;
+}
+
+.image_moscow {
+    position: relative;
+    height: 41px;
+    width: 35px;
+    left: 115px;
+    bottom: 0px;
+    z-index: 99999;
+}
